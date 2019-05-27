@@ -59,32 +59,32 @@ sidebar:
     author_links:
         github:
             title: global.github
-            url: https://github.com/
+            url: https://github.com/fletchto99
             icon: fab fa-github
-        stack_overflow:
-            title: global.stack_overflow
-            url: http://stackoverflow.com/users
-            icon: fab fa-stack-overflow
+        # stack_overflow:
+        #     title: global.stack_overflow
+        #     url: http://stackoverflow.com/users
+        #     icon: stack-overflow
         twitter:
             title: global.twitter
-            url: https://twitter.com/
+            url: https://twitter.com/fletchto99
             icon: fab fa-twitter
-        facebook:
-            title: global.facebook
-            url: https://facebook.com/
-            icon: fab fa-facebook
-        google_plus:
-            title: global.google_plus
-            url: https://plus.google.com/
-            icon: fab fa-google-plus
+        # facebook:
+        #     title: global.facebook
+        #     url: https://facebook.com/
+        #     icon: facebook
+        # google_plus:
+        #     title: global.google_plus
+        #     url: https://plus.google.com/
+        #     icon: google-plus
         linked_in:
             title: global.linkedin
-            url: https://www.linkedin.com/profile/
+            url: https://www.linkedin.com/in/mattlanglois
             icon: fab fa-linkedin
-        mail:
-            title: global.mail
-            url: mailto
-            icon: fa fa-envelope
+        # mail:
+        #     title: global.mail
+        #     url: mailto:
+        #     icon: envelope-o
     rss:
         rss:
             title: global.rss
@@ -117,15 +117,15 @@ header:
 
 # Your biography and your job is editable in each languages files in `languages` folder
 author:
-    email:
-    location:
+    email: fletchto99@gmail.com
+    location: Denver, CO
     # Your profile picture located in folder `source/_images/` (development)
     # or in `source/assets/images/` (production)
     # or you can use an external url
     # Overwritten by your gravatar image if `gravatar_email` is filled
-    picture:
+    picture: https://images.fletchto99.com/blog/profile.jpg
     # Your Twitter username without the @. E.g : `tranquilpeak`
-    twitter:
+    twitter: fletchto99
     # Your personal google plus profile id, not your blog or business page id.
     # E.g : `+JohnDoe` or `123812884128439`
     google_plus:
@@ -150,10 +150,10 @@ author:
 # large sidebar is swiped on all lower screens
 # 5: Display header bar on all screens and large sidebar is swiped on large screen
 # 6: Display header bar on all screens and medium sidebar is swiped
-sidebar_behavior: 1
-# Hide sidebar on all article pages to let articles take full width to improve reading, and
+sidebar_behavior: 2
+# Hide sidebar on all article page to let article take full width to improve reading, and
 # enjoy wide images and cover images. (true: enable, false: disable)
-clear_reading: true
+clear_reading: false
 # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
 thumbnail_image: true
 # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
@@ -172,9 +172,9 @@ auto_thumbnail_image: true
 # Otherwise put your image in folder `source/_images/` (development)
 # or in `source/assets/images/` if you can't or don't want to build the theme,
 # and use relative url : `your-image.png`
-cover_image: cover.jpg
+cover_image: https://images.fletchto99.com/blog/cover.jpg
 # Your favicon located in folder `source/_images/` (development) or in `source/assets/images/` (production)
-favicon:
+favicon: favicon.ico
 # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
 image_gallery: true
 # Pagination behavior of archive, category and tag pages (false: pagination disabled, true: pagination enabled)
@@ -196,27 +196,27 @@ gitment:
     # Switch
     enable: false
     # Your Github ID (Github username):
-    github_id:
+    github_id: fletchto99
     # The repo to store comments:
-    repo:
+    repo: blog.fletchto99.com
     # Your client ID:
-    client_id:
+    client_id: 13a30c4b50af8dd94961
     # Your client secret:
-    client_secret:
+    client_secret: 8f62abc123bdb8540df39ef7e262d78664a2aea2
 
 # Your Gitalk information
 # Read https://github.com/gitalk/gitalk#options to set up Gitalk
 gitalk:
     # Switch
-    enable: false
+    enable: true
     # Your client ID:
-    client_id:
+    client_id: 13a30c4b50af8dd94961
     # Your client secret:
-    client_secret:
+    client_secret: 8f62abc123bdb8540df39ef7e262d78664a2aea2
     # Your Github ID (Github username):
-    owner:
+    owner: fletchto99
     # The repo to store comments:
-    repo:
+    repo: blog.fletchto99.com
     # Optionals (no need to change for gitalk to work)
     options:
         labels: [ 'Gitalk' ]
@@ -238,7 +238,7 @@ gitalk:
 # -------------------
 
 # Your Google analystics web property ID : UA-XXXXX-X
-google_analytics_id:
+google_analytics_id: UA-74239016-1
 # Your Baidu analystics web property ID : 9505a5af654a2478f93fd6c0ae4f687d
 baidu_analytics_id:
 # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
