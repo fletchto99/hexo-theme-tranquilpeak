@@ -219,8 +219,6 @@ gitalk:
     repo: blog.fletchto99.com
     # Optionals (no need to change for gitalk to work)
     options:
-        labels:
-            - 'Gitalk'
         language: 'en'
         perPage: 10
         distractionFreeMode: false
