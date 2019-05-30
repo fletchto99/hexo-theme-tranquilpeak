@@ -183,7 +183,7 @@ category_pagination: true
 tag_pagination: true
 # Show some stats about the post in the post's metadata
 reading_time: true
-word_count: false
+word_count: true
 
 
 # ---------------
