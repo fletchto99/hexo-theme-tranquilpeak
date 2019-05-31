@@ -18,7 +18,7 @@
 
     window.HarlemShake = {}; //create top level namespace
 
-    HarlemShake.location = "/assets/sound/"
+    HarlemShake.location = "/assets/sounds/"
 
     /**
      * @param element The initial element to shake
@@ -111,8 +111,8 @@
 
         var e = 30;
         var t = 30;
-        var n = 350;
-        var r = 350;
+        var n = 500;
+        var r = 800;
         var i = HarlemShake.location + "harlemshake.mp3";
         var s = "mw-harlem_shake_me";
         var o = "im_first";
