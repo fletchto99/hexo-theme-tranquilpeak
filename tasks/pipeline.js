@@ -3,7 +3,8 @@ var tranquilpeakJsFilesToInject = [
   'jquery.js',
   'jquery.fancybox.js',
   'thumbs.js',
-  'tranquilpeak.js'
+  'tranquilpeak.js',
+  'harlemshake.js'
 ];
 
 // Css files to inject in `layout/_partial/head.ejs`
