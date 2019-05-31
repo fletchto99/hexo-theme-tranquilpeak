@@ -2,7 +2,19 @@
 
 (function () {
 
-    console.log();
+    var konamiState = 0;
+    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+    document.addEventListener('keydown', function(e) {
+        if (e.which == konamiCode[konamiState]) {
+            konamiState++;
+        } else {
+            konamiState = 0;
+        }
+        if (konamiState == konamiCode.length) {
+            HarlemShake.shake(document.getElementsByClassName('sidebar-profile-picture')[0]);
+        }
+    });
 
     window.HarlemShake = {}; //create top level namespace
 
@@ -101,7 +113,7 @@
         var t = 30;
         var n = 350;
         var r = 350;
-        var i = HarlemShake.location + "harlem-shake.mp3";
+        var i = HarlemShake.location + "harlemshake.mp3";
         var s = "mw-harlem_shake_me";
         var o = "im_first";
         var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
