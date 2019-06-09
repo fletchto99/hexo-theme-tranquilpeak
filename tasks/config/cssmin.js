@@ -3,7 +3,7 @@ var randToken = require('rand-token');
 module.exports = function(grunt) {
   grunt.config.set('cssmin', {
     options: {
-      keepSpecialComments: 0
+      specialComments: 0
     },
     // Minify `style.css` file into `style.min.css`
     prod: {
