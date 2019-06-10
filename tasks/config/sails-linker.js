@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         appRoot: 'source/'
       },
       files: {
-        'layout/_partial/head.ejs': 'source/assets/js/*.min.js'
+        'layout/_partial/script.ejs': 'source/assets/js/*.min.js'
       }
     },
     prodCss: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         appRoot: 'source/'
       },
       files: {
-        'layout/_partial/script.ejs': 'source/assets/css/*.min.css'
+        'layout/_partial/head.ejs': 'source/assets/css/*.min.css'
       }
     }
   });
