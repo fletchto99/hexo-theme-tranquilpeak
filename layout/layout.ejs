@@ -37,5 +37,6 @@
             <%- partial('_partial/search', null, {cache: true}) %>
         <% } %>
         <%- partial('_partial/cover', null, {cache: !config.relative_link}) %>
+        <%- partial('_partial/script', {post: page}) %>
     </body>
 </html>

@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         appRoot: 'source/'
       },
       files: {
-        'layout/_partial/head.ejs': pipeline.tranquilpeakCssFilesToInject
+        'layout/_partial/script.ejs': pipeline.tranquilpeakCssFilesToInject
       }
     },
     prodJs: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
         appRoot: 'source/'
       },
       files: {
-        'layout/_partial/head.ejs': 'source/assets/css/*.min.css'
+        'layout/_partial/script.ejs': 'source/assets/css/*.min.css'
       }
     }
   });
