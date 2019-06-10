@@ -91,7 +91,7 @@ module.exports = function(grunt) {
         },
         // gitalk
         {
-          src: gitalkPath + '/dist/gitalk.js',
+          src: gitalkPath + '/dist/gitalk.min.js',
           dest: jsDestFolder + 'gitalk.js'
         },
         {
@@ -100,12 +100,12 @@ module.exports = function(grunt) {
         },
         // moment
         {
-          src: './node_modules/moment/min/moment-with-locales.js',
+          src: './node_modules/moment/min/moment-with-locales.min.js',
           dest: jsDestFolder + 'moment-with-locales.js'
         },
         // algoliasearch
         {
-          src: './node_modules/algoliasearch/dist/algoliasearch.js',
+          src: './node_modules/algoliasearch/dist/algoliasearch.min.js',
           dest: jsDestFolder + 'algoliasearch.js'
         },
       ]
