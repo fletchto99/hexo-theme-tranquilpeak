@@ -1,7 +1,7 @@
 # Tranquilpeak
 
-[![Build Status](https://img.shields.io/travis/LouisBarranqueiro/hexo-theme-tranquilpeak/master.svg?style=flat-square)](https://travis-ci.org/LouisBarranqueiro/hexo-theme-tranquilpeak)
-[![Slack](https://img.shields.io/badge/slack-join-cf0e5b.svg?style=flat-square)](https://now-examples-slackin-stlpermtzi.now.sh)
+[![Build Status](https://img.shields.io/travis/LouisBarranqueiro/hexo-theme-tranquilpeak/master.svg?style=flat-square)](https://travis-ci.com/LouisBarranqueiro/hexo-theme-tranquilpeak)
+[![gitter chat](https://img.shields.io/gitter/room/LouisBarranqueiro/hexo-theme-tranquilpeak.svg?style=flat-square)](https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak)
 
 A gorgeous responsive theme for Hexo blog framework
 
@@ -56,8 +56,11 @@ A gorgeous responsive theme for Hexo blog framework
 
 ## Quick start
 
-1. Download the latest version built and ready for production here : [releases](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/releases)
-2. Read [documentation](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/DOCUMENTATION.md) to install and configure the theme.
+1. Download the latest [version](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/archive/master.zip)
+2. Rename the folder in `tranquilpeak` and place it in the `themes` folder of your Hexo blog
+3. Modify the theme in Hexo configuration file (`_config.yml`) by setting `theme` variable to `tranquilpeak`
+4. Go to the `tranquilpeak` folder and run `npm install && npm run prod`
+5. Read [documentation](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/DOCUMENTATION.md) to configure the theme.
 
 ## Demo
 

@@ -37,7 +37,7 @@
                 client_id: '<%- theme.gitment.client_id %>',
                 client_secret: '<%- theme.gitment.client_secret %>'
               }
-            }).render('disqus_thread')
+            }).render('gitment')
           })()
         </script>
     <% } else if (theme.gitalk.enable) { %>
@@ -52,7 +52,7 @@
               admin: ['<%= theme.gitalk.owner %>'],
               id: '<%= post[theme.gitalk.post_identifier] %>',
               ...<%- JSON.stringify(theme.gitalk.options) %>
-            }).render('disqus_thread')
+            }).render('gitalk')
           })()
         </script>
     <% } %>

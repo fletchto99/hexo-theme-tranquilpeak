@@ -57,6 +57,7 @@ module.exports = function(grunt) {
         // jquery
         {
           src: jqueryPath + '/dist/jquery.js',
+          dest: jsDestFolder + 'jquery.js'
           dest: jsDestFolder,
           flatten: true,
           expand: true
@@ -76,37 +77,46 @@ module.exports = function(grunt) {
         },
         {
           src: harlemshakePath + '/sound/harlemshake.mp3',
-          dest: soundsDestFolder,
-          flatten: true,
-          expand: true
+          dest: soundsDestFolder
         },
         // gitment
         {
           src: gitmentPath + '/dist/gitment.browser.js',
           dest: jsDestFolder + 'gitment.js',
+          flatten: true,
+          expand: true
         },
         {
           src: gitmentPath + '/style/default.css',
-          dest: cssDestFolder + 'gitment.css',
+          dest: cssDestFolder + 'gitment.css'
+          flatten: true,
+          expand: true
         },
         // gitalk
         {
           src: gitalkPath + '/dist/gitalk.min.js',
           dest: jsDestFolder + 'gitalk.js'
+          flatten: true,
+          expand: true
         },
         {
           src: gitalkPath + '/dist/gitalk.css',
-          dest: cssDestFolder + 'gitalk.css',
+          dest: cssDestFolder + 'gitalk.css'
+          flatten: true,
+          expand: true
         },
-        // moment
         {
           src: './node_modules/moment/min/moment-with-locales.min.js',
           dest: jsDestFolder + 'moment-with-locales.js'
+          flatten: true,
+          expand: true
         },
         // algoliasearch
         {
           src: './node_modules/algoliasearch/dist/algoliasearch.min.js',
           dest: jsDestFolder + 'algoliasearch.js'
+          flatten: true,
+          expand: true
         },
       ]
     }
