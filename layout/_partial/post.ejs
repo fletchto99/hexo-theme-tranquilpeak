@@ -44,7 +44,13 @@
             <%- partial('post/actions', {postContent: postContent}) %>
         <% } %>
         <% if (post.comments) { %>
-            <%- partial('post/comments') %>
+            <% if (theme.disqus_shortname) { %>
+                <%- partial('post/disqus') %>
+            <% } else if (theme.gitment.enable) { %>
+                <%- partial('post/gitment') %>
+            <% } else if (theme.gitalk.enable) { %>
+                <%- partial('post/gitalk') %>
+            <% } %>
         <% } %>
     </div>
 </article>
