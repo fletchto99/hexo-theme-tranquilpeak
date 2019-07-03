@@ -57,22 +57,16 @@ module.exports = function(grunt) {
         // jquery
         {
           src: jqueryPath + '/dist/jquery.js',
-          dest: jsDestFolder + 'jquery.js',
-          flatten: true,
-          expand: true
+          dest: jsDestFolder + 'jquery.js'
         },
         // harlem shake
         {
           src: harlemshakePath + '/js/harlemshake.js',
-          dest: jsDestFolder,
-          flatten: true,
-          expand: true
+          dest: jsDestFolder
         },
         {
           src: harlemshakePath + '/css/harlemshake.css',
-          dest: cssDestFolder,
-          flatten: true,
-          expand: true
+          dest: cssDestFolder
         },
         {
           src: harlemshakePath + '/sound/harlemshake.mp3',
@@ -81,41 +75,29 @@ module.exports = function(grunt) {
         // gitment
         {
           src: gitmentPath + '/dist/gitment.browser.js',
-          dest: jsDestFolder + 'gitment.js',
-          flatten: true,
-          expand: true
+          dest: jsDestFolder + 'gitment.js'
         },
         {
           src: gitmentPath + '/style/default.css',
-          dest: cssDestFolder + 'gitment.css',
-          flatten: true,
-          expand: true
+          dest: cssDestFolder + 'gitment.css'
         },
         // gitalk
         {
           src: gitalkPath + '/dist/gitalk.min.js',
-          dest: jsDestFolder + 'gitalk.js',
-          flatten: true,
-          expand: true
+          dest: jsDestFolder + 'gitalk.js'
         },
         {
           src: gitalkPath + '/dist/gitalk.css',
-          dest: cssDestFolder + 'gitalk.css',
-          flatten: true,
-          expand: true
+          dest: cssDestFolder + 'gitalk.css'
         },
         {
           src: './node_modules/moment/min/moment-with-locales.min.js',
-          dest: jsDestFolder + 'moment-with-locales.js',
-          flatten: true,
-          expand: true
+          dest: jsDestFolder + 'moment-with-locales.js'
         },
         // algoliasearch
         {
           src: './node_modules/algoliasearch/dist/algoliasearch.min.js',
-          dest: jsDestFolder + 'algoliasearch.js',
-          flatten: true,
-          expand: true
+          dest: jsDestFolder + 'algoliasearch.js'
         },
       ]
     }
