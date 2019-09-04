@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         },
         {
           src: harlemshakePath + '/sound/harlemshake.mp3',
-          dest: soundsDestFolder + 'harklemshake.mp3'
+          dest: soundsDestFolder + 'harlemshake.mp3'
         },
         // gitment
         {
