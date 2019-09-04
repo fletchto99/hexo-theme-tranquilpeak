@@ -62,15 +62,15 @@ module.exports = function(grunt) {
         // harlem shake
         {
           src: harlemshakePath + '/js/harlemshake.js',
-          dest: jsDestFolder
+          dest: jsDestFolder + 'harlemshake.js'
         },
         {
           src: harlemshakePath + '/css/harlemshake.css',
-          dest: cssDestFolder
+          dest: cssDestFolder + 'harlemshake.css'
         },
         {
           src: harlemshakePath + '/sound/harlemshake.mp3',
-          dest: soundsDestFolder
+          dest: soundsDestFolder + 'harklemshake.mp3'
         },
         // gitment
         {
