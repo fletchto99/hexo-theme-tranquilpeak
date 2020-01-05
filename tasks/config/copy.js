@@ -9,7 +9,7 @@ var jqueryPath = './node_modules/jquery';
 var gitmentPath = './node_modules/gitment';
 var gitalkPath = './node_modules/gitalk';
 
-var harlemshakePath = './source/_vendor'
+var harlemshakePath = './source/_vendor';
 
 module.exports = function(grunt) {
   grunt.config.set('copy', {
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
         {
           src: './node_modules/algoliasearch/dist/algoliasearch.min.js',
           dest: jsDestFolder + 'algoliasearch.js'
-        },
+        }
       ]
     }
   });
