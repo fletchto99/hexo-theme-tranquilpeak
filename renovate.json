@@ -3,5 +3,11 @@
     "config:base"
   ],
   "baseBranches": ["dev"],
-  "assignees": ["LouisBarranqueiro"]
+  "assignees": ["LouisBarranqueiro"],
+  "separateMinorPatch": true,
+  "packageRules": [{
+    "updateTypes": ["patch"],
+    "automerge": true,
+    "automergeType": "branch"
+  }]
 }
