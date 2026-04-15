@@ -1,0 +1,76 @@
+name: Sync with upstream
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Every Monday at 9:00 UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git
+          git fetch upstream main
+
+      - name: Check if update needed
+        id: check
+        run: |
+          UPSTREAM_SHA=$(git rev-parse upstream/main)
+          PARENT_SHA=$(git rev-parse HEAD~1)
+          if [ "$UPSTREAM_SHA" = "$PARENT_SHA" ]; then
+            echo "already_current=true" >> "$GITHUB_OUTPUT"
+            echo "Already up to date with upstream"
+          else
+            echo "already_current=false" >> "$GITHUB_OUTPUT"
+            echo "Upstream has new changes (upstream: $UPSTREAM_SHA, current parent: $PARENT_SHA)"
+          fi
+
+      - name: Rebase customizations onto upstream
+        if: steps.check.outputs.already_current != 'true'
+        id: rebase
+        run: |
+          if git rebase upstream/main; then
+            echo "rebase_ok=true" >> "$GITHUB_OUTPUT"
+          else
+            git rebase --abort
+            echo "rebase_ok=false" >> "$GITHUB_OUTPUT"
+            echo "::error::Rebase failed due to conflicts"
+          fi
+
+      - name: Force push
+        if: steps.check.outputs.already_current != 'true' && steps.rebase.outputs.rebase_ok == 'true'
+        run: git push --force-with-lease
+
+      - name: Open issue on conflict
+        if: steps.rebase.outputs.rebase_ok == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'upstream-sync'
+            });
+            if (existing.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'Upstream sync failed: rebase conflict',
+                body: 'The automatic rebase of customizations onto upstream `LouisBarranqueiro/hexo-theme-tranquilpeak` main failed due to merge conflicts.\n\nPlease resolve manually:\n```bash\ngit fetch upstream main\ngit rebase upstream/main\n# resolve conflicts\ngit push --force-with-lease\n```',
+                labels: ['upstream-sync']
+              });
+            }

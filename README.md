@@ -1,5 +1,8 @@
 # Tranquilpeak
 
+[![Build Status](https://github.com/fletchto99/hexo-theme-tranquilpeak/actions/workflows/nodejs.yml/badge.svg?branch=main)](https://github.com/fletchto99/hexo-theme-tranquilpeak/actions)
+[![gitter chat](https://img.shields.io/gitter/room/LouisBarranqueiro/hexo-theme-tranquilpeak.svg?style=flat-square)](https://gitter.im/LouisBarranqueiro/hexo-theme-tranquilpeak)
+
 A gorgeous responsive theme for Hexo blog framework
 
 [![Tranquilpeak](http://d1u9biwaxjngwg.cloudfront.net/showcases/showcase-v2.jpg)](http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak)

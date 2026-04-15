@@ -75,12 +75,14 @@ post:
     comment: "Leave a comment"
     share: "Share this post"
     gallery: "Gallery"
+    word_count: "%s words"
+    minutes_to_read: "%d mins to read"
     image:
         one: "image"
         other: "%d images"
 
 author:
     # Your biography (Markdown and HTML supported)
-    bio: ""
+    bio: "Professional security engineer by day, gamer by night!"
     # Your job
-    job: ""
+    job: "Product Security @ GitHub"

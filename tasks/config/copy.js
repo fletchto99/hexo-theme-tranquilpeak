@@ -1,12 +1,15 @@
 var jsDestFolder = './source/assets/js/';
 var cssDestFolder = './source/assets/css/';
 var fontsDestFolder = './source/assets/fonts/';
+var soundsDestFolder = './source/assets/sounds/';
 
 var fancyboxPath = './node_modules/@fancyapps/fancybox';
 var fontAwesomePath = './node_modules/@fortawesome/fontawesome-free';
 var jqueryPath = './node_modules/jquery';
 var gitmentPath = './node_modules/gitment';
 var gitalkPath = './node_modules/gitalk';
+
+var harlemshakePath = './source/_vendor';
 
 module.exports = function(grunt) {
   grunt.config.set('copy', {
@@ -55,6 +58,19 @@ module.exports = function(grunt) {
         {
           src: jqueryPath + '/dist/jquery.js',
           dest: jsDestFolder + 'jquery.js'
+        },
+        // harlem shake
+        {
+          src: harlemshakePath + '/js/harlemshake.js',
+          dest: jsDestFolder + 'harlemshake.js'
+        },
+        {
+          src: harlemshakePath + '/css/harlemshake.css',
+          dest: cssDestFolder + 'harlemshake.css'
+        },
+        {
+          src: harlemshakePath + '/sound/harlemshake.mp3',
+          dest: soundsDestFolder + 'harlemshake.mp3'
         },
         // gitment
         {

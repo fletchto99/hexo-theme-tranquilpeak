@@ -45,8 +45,8 @@
     "grunt-text-replace": "0.4.0",
     "include-all": "4.0.3",
     "load-grunt-tasks": "5.1.0",
-    "node-sass": "9.0.0",
-    "rand-token": "1.0.1"
+    "rand-token": "1.0.1",
+    "sass": "^1.99.0"
   },
   "dependencies": {
     "@fancyapps/fancybox": "3.5.7",
@@ -55,6 +55,7 @@
     "gitalk": "1.8.0",
     "gitment": "0.0.3",
     "hexo-util": "3.1.0",
+    "hexo-wordcount": "^6.0.1",
     "jquery": "3.7.1",
     "jsdom": "22.1.0",
     "moment": "2.29.4"
